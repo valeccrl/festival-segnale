@@ -3,8 +3,8 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #245c49;
-  --colore-primario-scuro: #173f32;
+  --colore-primario: #1f5a7a;
+  --colore-primario-scuro: #17435b;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
   --font-testo: Arial, Helvetica, sans-serif;
@@ -45,7 +45,7 @@ a:focus-visible {
 
 .site-header {
   padding: 1.25rem 0;
-  border-bottom: 4px solid #d8d2c5;
+ border-bottom: 4px solid var(--colore-primario);
 }
 
 .brand {
@@ -156,7 +156,23 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Qui inseriremo la regola .event-grid durante la demo. */
+.event-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 3rem;
+}
+
+@media (min-width: 600px) {
+  .event-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 
 .event-card {
   margin-bottom: 1.5rem;
