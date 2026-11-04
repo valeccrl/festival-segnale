@@ -221,4 +221,40 @@ h3 {
   top: 1rem;
 }
 
-/* Qui aggiungeremo la media query durante la demo. */
+/* --- CORREZIONI ACCESSIBILITÀ E CONTRASTO (>= 4.5:1) --- */
+.eyebrow,
+.event-meta,
+.site-footer {
+  color: #2b352e; /* Colore più scuro per garantire un contrasto ottimale sullo sfondo */
+}
+
+/* Evidenziazione da tastiera (Focus) per i pulsanti di Swiper */
+.swiper-button-next:focus-visible,
+.swiper-button-prev:focus-visible {
+  outline: 3px solid var(--colore-testo);
+  outline-offset: 4px;
+}
+
+/* Adattamento responsive per la mappa e la galleria (375px, 768px, 1280px) */
+.map-container iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 350px;
+  }
+}
+/* Ingrandisce la mappa e la rende responsive */
+.map-container iframe {
+  width: 100%;
+  height: 600px; /* Altezza di default più alta */
+}
+
+/* Su schermi più grandi (come i computer), rendila ancora più spaziosa */
+@media (min-width: 768px) {
+  .map-container iframe {
+    height: 700px; 
+  }
+}

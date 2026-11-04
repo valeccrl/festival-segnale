@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info e luoghi — Segnale · Festival di design</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Swiper 14.4.0 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Segnale<span>Festival di design</span></a>
+      <nav aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="programma.html">Programma</a>
+        <a href="info.html" aria-current="page">Info e luoghi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="container">
+    <section class="content-section" aria-labelledby="titolo-info">
+      <p class="eyebrow">Torino</p>
+      <h1 id="titolo-info">Luoghi</h1>
+      <p class="lead">Tutto quello che c'è da sapere per orientarsi tra gli eventi, le sedi e le giornate di Segnale.</p>
+      
+      <div class="reading-text">
+        <p>Il festival si sviluppa in tre differenti sedi nel cuore della città, pensate per accogliere incontri, laboratori, mostre e momenti di condivisione aperta a tutti.</p>
+      </div>
+    </section>
+
+    <!-- Galleria Swiper con testi alternativi appropriati -->
+    <section class="content-section" aria-labelledby="titolo-galleria">
+      <h2 id="titolo-galleria">Spazi diversi, idee che si incontrano</h2>
+      
+      <div class="swiper mySwiper" aria-label="Galleria fotografica delle sedi del festival">
+        <div class="swiper-wrapper">
+          
+          <!-- Diapositiva 1 -->
+          <div class="swiper-slide">
+            <img src="assets/luoghi/mirafiori.jpg" alt="Fotografia della sede di Mirafiori, spazio ampio e luminoso per incontri e progetti" width="1200" height="600" style="width:100%; height:auto; display:block; object-fit:cover;">
+            <h3>Mirafiori</h3>
+            <p>Incontri e progetti condivisi.</p>
+          </div>
+
+          <!-- Diapositiva 2 -->
+          <div class="swiper-slide">
+            <img src="assets/luoghi/politecnico-valentino.jpg" alt="Fotografia del Politecnico al Valentino, architettura storica immersa nel verde" width="1200" height="600" style="width:100%; height:auto; display:block; object-fit:cover;">
+            <h3>Politecnico Valentino</h3>
+            <p>Laboratori e sperimentazioni.</p>
+          </div>
+
+          <!-- Diapositiva 3 -->
+          <div class="swiper-slide">
+            <img src="assets/luoghi/sede-centrale.jpg" alt="Fotografia della sede centrale, edificio accogliente dedicato a mostre e percorsi" width="1200" height="600" style="width:100%; height:auto; display:block; object-fit:cover;">
+            <h3>Sede centrale</h3>
+            <p>Mostre e percorsi.</p>
+          </div>
+
+        </div>
+        
+        <!-- Pulsanti di navigazione con etichette accessibili -->
+        <div class="swiper-button-next" aria-label="Diapositiva successiva"></div>
+        <div class="swiper-button-prev" aria-label="Diapositiva precedente"></div>
+      </div>
+    </section>
+
+    <!-- Sezione Mappa e Indirizzi -->
+    <section class="content-section" aria-labelledby="mappa-sedi">
+      <h2 id="mappa-sedi">Mappa delle tre sedi di riferimento per il festival Segnale a Torino</h2>
+      <p class="reading-text">Consulta la mappa interattiva del festival o apri la vista a schermo intero.</p>
+      
+      <div class="map-container" style="margin-bottom: 2rem;">
+        <iframe 
+          title="Mappa interattiva uMap con le posizioni delle tre sedi del festival Segnale a Torino" 
+          width="100%" 
+          height="800" 
+          src="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleBar=false&amp;miniMap=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;allowEdit=false&amp;moreControl=true&amp;searchControl=null&amp;tileLayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=undefined&amp;captionBar=false&amp;captionMenus=true" 
+          style="border: 0; width: 100%; border-radius: 8px;">
+        </iframe>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+          <a href="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528">Visualizza la mappa a schermo intero</a>
+        </p>
+      </div>
+
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem;">Indirizzi e indicazioni</h3>
+      <ul class="venues-list" style="list-style-type: disc; padding-left: 1.5rem; line-height: 1.8;">
+        <li>
+          <strong>Sede centrale</strong>, Corso Duca degli Abruzzi 24, Torino — 
+          <a href="https://maps.google.com/?q=Corso+Duca+degli+Abruzzi+24+Torino" target="_blank" rel="noopener">Indicazioni per Sede centrale su Google Maps</a>
+        </li>
+        <li>
+          <strong>Politecnico al Valentino</strong>, Viale Mattioli 39, Torino — 
+          <a href="https://maps.google.com/?q=Viale+Mattioli+39+Torino" target="_blank" rel="noopener">Indicazioni per Politecnico al Valentino su Google Maps</a>
+        </li>
+        <li>
+          <strong>Sede di Mirafiori</strong>, Corso Luigi Settembrini 178, Torino — 
+          <a href="https://maps.google.com/?q=Corso+Luigi+Settembrini+178+Torino" target="_blank" rel="noopener">Indicazioni per Sede di Mirafiori su Google Maps</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="titolo-luoghi-dettaglio">
+      <p class="reading-text">Tutte le sedi sono facilmente raggiungibili a piedi o con i mezzi pubblici.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Segnale · Progetto didattico · Festival immaginario</p>
+    </div>
+  </footer>
+
+  <!-- Swiper 14.4.0 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      keyboard: {
+        enabled: true,
+      },
+    });
+  </script>
+</body>
+</html>
