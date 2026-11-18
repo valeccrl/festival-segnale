@@ -8,7 +8,8 @@
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
   --font-testo: Arial, Helvetica, sans-serif;
-  --font-titoli: Georgia, "Times New Roman", serif;
+  /* Applichiamo Bricolage Grotesque ai titoli, con la riserva sans-serif */
+  --font-titoli: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -44,8 +45,12 @@ a:focus-visible {
 }
 
 .site-header {
+  position: sticky;       /* Si muove con la pagina finché non raggiunge il bordo */
+  top: 0;                 /* Si blocca esattamente in cima alla finestra */
+  z-index: 1000;          /* Mantiene il menu sempre in primo piano rispetto a mappe e gallerie */
+  background-color: var(--colore-sfondo); /* Sfondo pieno per garantire la leggibilità dei testi */
   padding: 1.25rem 0;
- border-bottom: 4px solid var(--colore-primario);
+  border-bottom: 4px solid var(--colore-primario);
 }
 
 .brand {
@@ -66,6 +71,35 @@ a:focus-visible {
 
 nav {
   margin-top: 1rem;
+}
+
+/* --- MENU RESPONSIVE --- */
+
+/* Disposizione predefinita (Sotto i 600 px: in colonna) */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  display: block;
+  margin-right: 0;
+  padding: 0.25rem 0;
+}
+
+/* Da 600 px in su: disposizione in riga (orizzontale) */
+@media (min-width: 600px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+  }
 }
 
 nav a {
